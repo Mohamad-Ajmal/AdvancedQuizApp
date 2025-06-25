@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:quizapp/screens/auth_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -45,11 +46,12 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 16),
                   ElevatedButton(
-                    onPressed: () => (),
-                    // onPressed:
-                    //     () = {
-                    //       // Navigator.of(context).push(MaterialPageRoute(builder: (ctx)))
-                    //     },
+                    onPressed:
+                        () => {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (ctx) => AuthScreen()),
+                          ),
+                        },
                     child: Text("GET STARTED"),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
